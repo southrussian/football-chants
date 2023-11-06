@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+struct Manager {
+    let name: String
+    let job: Job
+}
+
+enum Job {
+    case manager
+    case headCoach
+}

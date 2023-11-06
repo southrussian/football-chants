@@ -5,6 +5,8 @@
 //  Created by Danil Peregorodiev on 05.11.2023.
 //
 
+// for future usage - never name group 'Resources' - it craches all the project
+
 import UIKit
 
 class ChantsViewController: UIViewController {
