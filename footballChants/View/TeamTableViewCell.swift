@@ -77,14 +77,18 @@ class TeamTableViewCell: UITableViewCell {
     
     func configure() {
         containerView.backgroundColor = TeamType.arsenal.background
+        badgeView.image = TeamType.arsenal.badge
+        playButton.setImage(UIImage(systemName: "play.circle.fill", withConfiguration: UIImage.SymbolConfiguration(pointSize: 32)), for: .normal)
         
         nameLabelView.text = "Arsenal"
         foundedLabelView.text = "1900"
         jobLabelView.text = "Head Coach"
-        infoLabelView.text = "sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text "
+        infoLabelView.text = "sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text"
         
         self.contentView.addSubview(containerView)
         containerView.addSubview(stackView)
+        containerView.addSubview(badgeView)
+        containerView.addSubview(playButton)
         
         stackView.addArrangedSubview(nameLabelView)
         stackView.addArrangedSubview(foundedLabelView)
@@ -97,10 +101,20 @@ class TeamTableViewCell: UITableViewCell {
             containerView.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor),
             containerView.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor),
             
-            stackView.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 8),
-            stackView.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -8),
-            stackView.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 8),
-            stackView.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: -8)
+            badgeView.heightAnchor.constraint(equalToConstant: 50),
+            badgeView.widthAnchor.constraint(equalToConstant: 50),
+            badgeView.topAnchor.constraint(equalTo: stackView.topAnchor),
+            badgeView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 8),
+            
+            stackView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 16),
+            stackView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -16),
+            stackView.leadingAnchor.constraint(equalTo: badgeView.trailingAnchor, constant: 8),
+            stackView.trailingAnchor.constraint(equalTo: playButton.leadingAnchor, constant: -8),
+            
+            playButton.heightAnchor.constraint(equalToConstant: 44),
+            playButton.widthAnchor.constraint(equalToConstant: 44),
+            playButton.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -8),
+            playButton.centerYAnchor.constraint(equalTo: containerView.centerYAnchor)
         ])
 
     }
