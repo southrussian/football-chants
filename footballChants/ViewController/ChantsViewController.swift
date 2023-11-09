@@ -56,22 +56,13 @@ private extension ChantsViewController {
 extension ChantsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: TeamTableViewCell.cellId, for: indexPath) as! TeamTableViewCell
         
-        switch indexPath.row {
-        case 0:
-            cell.backgroundColor = .systemTeal
-        case 1:
-            cell.backgroundColor = .systemGray
-        case 2:
-            cell.backgroundColor = .systemPink
-        default:
-            break
-        }
+        cell.configure()
         return cell
     }
 }

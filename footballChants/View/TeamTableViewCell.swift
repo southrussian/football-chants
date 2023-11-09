@@ -29,7 +29,7 @@ class TeamTableViewCell: UITableViewCell {
         let labelView = UILabel()
         labelView.translatesAutoresizingMaskIntoConstraints = false
         labelView.numberOfLines = 0
-        labelView.font = .systemFont(ofSize: 10, weight: .light)
+        labelView.font = .systemFont(ofSize: 12, weight: .light)
         labelView.textColor = .white
         return labelView
     }()
@@ -38,7 +38,7 @@ class TeamTableViewCell: UITableViewCell {
         let labelView = UILabel()
         labelView.translatesAutoresizingMaskIntoConstraints = false
         labelView.numberOfLines = 0
-        labelView.font = .systemFont(ofSize: 10, weight: .light)
+        labelView.font = .systemFont(ofSize: 12, weight: .light)
         labelView.textColor = .white
         return labelView
     }()
@@ -47,7 +47,7 @@ class TeamTableViewCell: UITableViewCell {
         let labelView = UILabel()
         labelView.translatesAutoresizingMaskIntoConstraints = false
         labelView.numberOfLines = 0
-        labelView.font = .systemFont(ofSize: 10, weight: .light)
+        labelView.font = .systemFont(ofSize: 10, weight: .bold)
         labelView.textColor = .white
         return labelView
     }()
@@ -67,9 +67,9 @@ class TeamTableViewCell: UITableViewCell {
         nameLabelView.text = "Arsenal"
         foundedLabelView.text = "1900"
         jobLabelView.text = "Head Coach"
-        infoLabelView.text = "sample text"
+        infoLabelView.text = "sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text "
         
-        self.containerView.addSubview(containerView)
+        self.contentView.addSubview(containerView)
         containerView.addSubview(stackView)
         
         stackView.addArrangedSubview(nameLabelView)
@@ -78,14 +78,15 @@ class TeamTableViewCell: UITableViewCell {
         stackView.addArrangedSubview(infoLabelView)
         
         NSLayoutConstraint.activate([
-            containerView.topAnchor.constraint(equalTo: self.containerView.topAnchor),
-            containerView.bottomAnchor.constraint(equalTo: self.containerView.bottomAnchor),
-            containerView.leadingAnchor.constraint(equalTo: self.containerView.leadingAnchor),
-            containerView.trailingAnchor.constraint(equalTo: self.containerView.trailingAnchor),
-            stackView.topAnchor.constraint(equalTo: self.stackView.topAnchor, constant: 8),
-            stackView.bottomAnchor.constraint(equalTo: self.stackView.bottomAnchor, constant: -8),
-            stackView.leadingAnchor.constraint(equalTo: self.stackView.leadingAnchor, constant: 8),
-            stackView.trailingAnchor.constraint(equalTo: self.stackView.trailingAnchor, constant: -8)
+            containerView.topAnchor.constraint(equalTo: self.contentView.topAnchor),
+            containerView.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor),
+            containerView.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor),
+            containerView.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor),
+            
+            stackView.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 8),
+            stackView.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -8),
+            stackView.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 8),
+            stackView.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: -8)
         ])
 
     }
