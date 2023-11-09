@@ -61,7 +61,7 @@ class TeamTableViewCell: UITableViewCell {
         let labelView = UILabel()
         labelView.translatesAutoresizingMaskIntoConstraints = false
         labelView.numberOfLines = 0
-        labelView.font = .systemFont(ofSize: 10, weight: .bold)
+        labelView.font = .systemFont(ofSize: 18, weight: .heavy)
         labelView.textColor = .white
         return labelView
     }()
@@ -74,6 +74,10 @@ class TeamTableViewCell: UITableViewCell {
         labelView.textColor = .white
         return labelView
     }()
+    
+    override func layoutSubviews() {
+        containerView.layer.cornerRadius = 10
+    }
     
     func configure() {
         containerView.backgroundColor = TeamType.arsenal.background
@@ -96,10 +100,10 @@ class TeamTableViewCell: UITableViewCell {
         stackView.addArrangedSubview(infoLabelView)
         
         NSLayoutConstraint.activate([
-            containerView.topAnchor.constraint(equalTo: self.contentView.topAnchor),
-            containerView.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor),
-            containerView.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor),
-            containerView.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor),
+            containerView.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 10),
+            containerView.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -10),
+            containerView.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 10),
+            containerView.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: -10),
             
             badgeView.heightAnchor.constraint(equalToConstant: 50),
             badgeView.widthAnchor.constraint(equalToConstant: 50),
