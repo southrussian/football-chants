@@ -25,6 +25,20 @@ class TeamTableViewCell: UITableViewCell {
         return stackView
     }()
     
+    private lazy var badgeView: UIImageView = {
+        let badgeView = UIImageView()
+        badgeView.translatesAutoresizingMaskIntoConstraints = false
+        badgeView.contentMode = .scaleAspectFit
+        return badgeView
+    }()
+    
+    private lazy var playButton: UIButton = {
+        let playButton = UIButton()
+        playButton.translatesAutoresizingMaskIntoConstraints = false
+        playButton.tintColor = .white
+        return playButton
+    }()
+    
     private lazy var jobLabelView: UILabel = {
         let labelView = UILabel()
         labelView.translatesAutoresizingMaskIntoConstraints = false
