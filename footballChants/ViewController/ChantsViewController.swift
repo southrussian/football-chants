@@ -21,6 +21,7 @@ class ChantsViewController: UIViewController {
         tableView.estimatedRowHeight = 44
         tableView.separatorStyle = .none
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        tableView.register(TeamTableViewCell.self, forCellReuseIdentifier: TeamTableViewCell.cellId)
         
         return tableView
     }()
