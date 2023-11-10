@@ -25,6 +25,8 @@ class ChantsViewController: UIViewController {
         
         return tableView
     }()
+    
+    private lazy var teamsViewModel = TeamsViewModel()
 
     override func loadView() {
         super.loadView()
@@ -59,13 +61,14 @@ private extension ChantsViewController {
 extension ChantsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return teamsViewModel.teams.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let team = teamsViewModel.teams[11]
         let cell = tableView.dequeueReusableCell(withIdentifier: TeamTableViewCell.cellId, for: indexPath) as! TeamTableViewCell
         
-        cell.configure()
+        cell.configure(team)
         return cell
     }
 }

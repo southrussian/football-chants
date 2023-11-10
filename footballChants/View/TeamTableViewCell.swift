@@ -79,15 +79,15 @@ class TeamTableViewCell: UITableViewCell {
         containerView.layer.cornerRadius = 10
     }
     
-    func configure() {
-        containerView.backgroundColor = TeamType.arsenal.background
-        badgeView.image = TeamType.arsenal.badge
+    func configure(_ item: Team) {
+        containerView.backgroundColor = item.id.background
+        badgeView.image = item.id.badge
         playButton.setImage(UIImage(systemName: "play.circle.fill", withConfiguration: UIImage.SymbolConfiguration(pointSize: 32)), for: .normal)
         
-        nameLabelView.text = "Arsenal"
-        foundedLabelView.text = "1900"
-        jobLabelView.text = "Head Coach"
-        infoLabelView.text = "sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text sample text"
+        nameLabelView.text = item.name
+        foundedLabelView.text = item.founded
+        jobLabelView.text = "Current \(item.manager.job.rawValue) is \(item.manager.name)"
+        infoLabelView.text = item.info
         
         self.contentView.addSubview(containerView)
         containerView.addSubview(stackView)

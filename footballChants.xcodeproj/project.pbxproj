@@ -20,6 +20,7 @@
 		581642A32AF9924B006DF00B /* ViewModel in Resources */ = {isa = PBXBuildFile; fileRef = 581642A22AF9924B006DF00B /* ViewModel */; };
 		581642A62AFA97F3006DF00B /* TeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581642A52AFA97F3006DF00B /* TeamTableViewCell.swift */; };
 		581642A82AFAE52F006DF00B /* Teams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581642A72AFAE52F006DF00B /* Teams.swift */; };
+		589038572AFE85590006663C /* TeamsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589038562AFE85590006663C /* TeamsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		581642A22AF9924B006DF00B /* ViewModel */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ViewModel; sourceTree = "<group>"; };
 		581642A52AFA97F3006DF00B /* TeamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableViewCell.swift; sourceTree = "<group>"; };
 		581642A72AFAE52F006DF00B /* Teams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teams.swift; sourceTree = "<group>"; };
+		589038562AFE85590006663C /* TeamsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				581642982AF7C01A006DF00B /* ViewController */,
 				581642962AF6FAEC006DF00B /* Service */,
 				581642802AEBF4FD006DF00B /* AppDelegate.swift */,
+				589038562AFE85590006663C /* TeamsViewModel.swift */,
 				581642A72AFAE52F006DF00B /* Teams.swift */,
 				581642822AEBF4FD006DF00B /* SceneDelegate.swift */,
 				581642842AEBF4FD006DF00B /* ViewController.swift */,
@@ -193,6 +196,7 @@
 				581642812AEBF4FD006DF00B /* AppDelegate.swift in Sources */,
 				5816429D2AF98F25006DF00B /* Team.swift in Sources */,
 				581642832AEBF4FD006DF00B /* SceneDelegate.swift in Sources */,
+				589038572AFE85590006663C /* TeamsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

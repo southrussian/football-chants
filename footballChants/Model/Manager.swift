@@ -12,7 +12,7 @@ struct Manager {
     let job: Job
 }
 
-enum Job {
-    case manager
-    case headCoach
+enum Job: String {
+    case manager = "Manager"
+    case headCoach = "Head Coach"
 }
