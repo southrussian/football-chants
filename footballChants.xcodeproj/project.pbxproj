@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		580DEB3D2AFFB1D000CEFB1A /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580DEB3C2AFFB1D000CEFB1A /* Assets.swift */; };
 		581642812AEBF4FD006DF00B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581642802AEBF4FD006DF00B /* AppDelegate.swift */; };
 		581642832AEBF4FD006DF00B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581642822AEBF4FD006DF00B /* SceneDelegate.swift */; };
 		581642852AEBF4FD006DF00B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581642842AEBF4FD006DF00B /* ViewController.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		580DEB3C2AFFB1D000CEFB1A /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		5816427D2AEBF4FD006DF00B /* footballChants.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = footballChants.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		581642802AEBF4FD006DF00B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		581642822AEBF4FD006DF00B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				581642862AEBF4FD006DF00B /* Main.storyboard */,
 				5816428B2AEBF4FF006DF00B /* LaunchScreen.storyboard */,
 				5816428E2AEBF4FF006DF00B /* Info.plist */,
+				580DEB3C2AFFB1D000CEFB1A /* Assets.swift */,
 			);
 			path = footballChants;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				581642812AEBF4FD006DF00B /* AppDelegate.swift in Sources */,
 				5816429D2AF98F25006DF00B /* Team.swift in Sources */,
 				581642832AEBF4FD006DF00B /* SceneDelegate.swift in Sources */,
+				580DEB3D2AFFB1D000CEFB1A /* Assets.swift in Sources */,
 				589038572AFE85590006663C /* TeamsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
