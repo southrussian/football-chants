@@ -82,7 +82,7 @@ class TeamTableViewCell: UITableViewCell {
     func configure(_ item: Team) {
         containerView.backgroundColor = item.id.background
         badgeView.image = item.id.badge
-        playButton.setImage(UIImage(systemName: "play.circle.fill", withConfiguration: UIImage.SymbolConfiguration(pointSize: 32)), for: .normal)
+        playButton.setImage(item.isPlaying ? Assets.pause : Assets.play, for: .normal)
         
         nameLabelView.text = item.name
         foundedLabelView.text = item.founded

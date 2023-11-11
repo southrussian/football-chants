@@ -35,7 +35,7 @@ class ChantsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .white
+        self.view.backgroundColor = .systemBackground
     }
 }
 
@@ -65,7 +65,7 @@ extension ChantsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let team = teamsViewModel.teams[11]
+        let team = teamsViewModel.teams[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: TeamTableViewCell.cellId, for: indexPath) as! TeamTableViewCell
         
         cell.configure(team)
