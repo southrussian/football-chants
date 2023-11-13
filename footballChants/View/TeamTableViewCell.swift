@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol TeamTableViewCellDelegate: AnyObject {
+    func didTapPlayback(for team: Team)
+}
+
 class TeamTableViewCell: UITableViewCell {
 
     static let cellId = "TeamTableViewCell"
@@ -79,7 +83,16 @@ class TeamTableViewCell: UITableViewCell {
         containerView.layer.cornerRadius = 10
     }
     
-    func configure(_ item: Team) {
+    private weak var delegate: TeamTableViewCellDelegate?
+    private var team: Team?
+    
+    func configure(_ item: Team, delegate: TeamTableViewCellDelegate) {
+        
+        self.delegate = delegate
+        self.team = item
+        
+        playButton.addTarget(self, action: #selector(didTapPlayback), for: .touchUpInside)
+        
         containerView.backgroundColor = item.id.background
         badgeView.image = item.id.badge
         playButton.setImage(item.isPlaying ? Assets.pause : Assets.play, for: .normal)
@@ -121,5 +134,9 @@ class TeamTableViewCell: UITableViewCell {
             playButton.centerYAnchor.constraint(equalTo: containerView.centerYAnchor)
         ])
 
+    }
+    
+    @objc func didTapPlayback() {
+        
     }
 }
