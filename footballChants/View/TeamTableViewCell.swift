@@ -137,6 +137,6 @@ class TeamTableViewCell: UITableViewCell {
     }
     
     @objc func didTapPlayback() {
-        
+        print("selected \(team?.name)")
     }
 }

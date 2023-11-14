@@ -68,7 +68,13 @@ extension ChantsViewController: UITableViewDataSource {
         let team = teamsViewModel.teams[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: TeamTableViewCell.cellId, for: indexPath) as! TeamTableViewCell
         
-        cell.configure(team)
+        cell.configure(team, delegate: self)
         return cell
+    }
+}
+
+extension ChantsViewController: TeamTableViewCellDelegate {
+    func didTapPlayback(for team: Team) {
+        
     }
 }
