@@ -27,6 +27,7 @@ class ChantsViewController: UIViewController {
     }()
     
     private lazy var teamsViewModel = TeamsViewModel()
+    private lazy var audioViewModel = AudioViewModel()
 
     override func loadView() {
         super.loadView()
@@ -75,8 +76,8 @@ extension ChantsViewController: UITableViewDataSource {
 
 extension ChantsViewController: TeamTableViewCellDelegate {
     func didTapPlayback(for team: Team) {
+        audioViewModel.playback(for: team)
         teamsViewModel.togglePlatButton(for: team)
         tableView.reloadData()
-        print("selected \(team.name)")
     }
 }
