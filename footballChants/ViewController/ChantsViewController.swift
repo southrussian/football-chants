@@ -75,6 +75,8 @@ extension ChantsViewController: UITableViewDataSource {
 
 extension ChantsViewController: TeamTableViewCellDelegate {
     func didTapPlayback(for team: Team) {
-        
+        teamsViewModel.togglePlatButton(for: team)
+        tableView.reloadData()
+        print("selected \(team.name)")
     }
 }
